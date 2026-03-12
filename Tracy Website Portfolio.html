@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracy Risancho | Digital Expert | Sub-Editor  </title>
+
+<style>
+:root{
+  --primary:#00e5ff;
+  --dark:#0b0f1a;
+  --light:#ffffff;
+  --glass:rgba(255,255,255,0.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#05070f,#0b1225);
+  color:var(--light);
+  overflow-x:hidden;
+}
+
+/* ====== 3D BACKGROUND ====== */
+.bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  perspective:1000px;
+  z-index:-1;
+}
+
+.bg span{
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:linear-gradient(45deg,var(--primary),transparent);
+  animation:float 20s infinite linear;
+  transform-style:preserve-3d;
+  opacity:0.2;
+}
+
+@keyframes float{
+  0%{transform:translateZ(0) rotate(0deg);}
+  100%{transform:translateZ(600px) rotate(360deg);}
+}
+
+/* ====== HEADER ====== */
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  max-width:1200px;
+  padding:40px;
+}
+
+.hero-card{
+  background:var(--glass);
+  border-radius:20px;
+  padding:40px;
+  backdrop-filter:blur(20px);
+  transform-style:preserve-3d;
+  transition:transform 0.5s;
+}
+
+.hero-card:hover{
+  transform:rotateY(10deg) rotateX(5deg);
+}
+
+.hero h1{
+  font-size:3rem;
+  color:var(--primary);
+}
+
+.hero h2{
+  margin:10px 0;
+  font-weight:300;
+}
+
+.hero p{
+  line-height:1.6;
+  opacity:0.9;
+}
+
+/* ====== PASSPORT PHOTO ====== */
+.photo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.photo img{
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid var(--primary);
+  box-shadow:0 0 40px var(--primary);
+  animation:pulse 4s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 30px var(--primary);}
+  50%{box-shadow:0 0 70px var(--primary);}
+}
+
+/* ====== SECTION ====== */
+section{
+  padding:100px 10%;
+}
+
+.section-title{
+  font-size:2.5rem;
+  margin-bottom:40px;
+  color:var(--primary);
+}
+
+/* ====== SKILLS ====== */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.skill-card{
+  background:var(--glass);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  transform-style:preserve-3d;
+  transition:0.5s;
+}
+
+.skill-card:hover{
+  transform:translateZ(30px) rotateX(5deg);
+}
+
+/* ====== EXPERIENCE ====== */
+.timeline{
+  border-left:3px solid var(--primary);
+  padding-left:30px;
+}
+
+.timeline-item{
+  margin-bottom:30px;
+}
+
+.timeline-item h3{
+  color:var(--primary);
+}
+
+/* ====== PROJECTS ====== */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.project{
+  background:var(--glass);
+  padding:30px;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.project:hover{
+  transform:scale(1.05) rotateY(5deg);
+}
+
+/* ====== CONTACT ====== */
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  display:inline-block;
+  margin:10px;
+  padding:15px 30px;
+  border-radius:50px;
+  background:var(--primary);
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.contact a:hover{
+  transform:scale(1.1);
+}
+
+/* ====== FOOTER ====== */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.6;
+}
+
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+  <span style="top:10%;left:20%"></span>
+  <span style="top:70%;left:60%"></span>
+  <span style="top:40%;left:80%"></span>
+</div>
+
+<header>
+  <div class="hero">
+    <div class="hero-card">
+      <h1>Tracy Risancho</h1>
+      <h2>IT Expert | Social Media Manager | Sub-Editor</h2>
+      <p>
+        I am an IT expert, a graphic designer and a social Media Manager and a journalist by profession.
+        I work with organizations as a trainer and partner with organizations to empower the youths.
+      </p>
+    </div>
+
+    <div class="photo">
+      <img src="DOK.jpg" alt="">
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">Skills & Expertise</h2>
+  <div class="skills">
+    <div class="skill-card">Digital Marketing</div>
+    <div class="skill-card">Web Development</div>
+    <div class="skill-card">Freelancing & Remote Work</div>
+    <div class="skill-card">Graphic Design</div>
+    <div class="skill-card">AI Tools for Business</div>
+    <div class="skill-card">Training & Mentorship</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Self-empolyed Social  Media Manager </h3>
+      <p>I have managed to run over 30 social media plalforms </p>
+    </div>
+    <div class="timeline-item">
+      <h3>Lead Graphicer – TRACY FOUNDATION</h3>
+      <p>A have done graphics for organisation </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Projects & Impact</h2>
+  <div class="projects">
+    <div class="project">Digital Skills Bootcamps</div>
+    <div class="project">Youth Online Employment Programs</div>
+    <div class="project">Freelancing & AI Workshops</div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <a href="tel:0769722940">Call Me</a>
+  <a href="mailto:traceyrisanchoh@gmail.com">Email</a>
+  <a href="#">Download CV</a>
+</section>
+
+<footer>
+  © 2026 Tracy Risancho | All Rights Reserved
+</footer>
+
+<script>
+document.addEventListener("mousemove",e=>{
+  document.querySelectorAll(".hero-card,.project,.skill-card").forEach(card=>{
+    let x=(window.innerWidth/2 - e.pageX)/30;
+    let y=(window.innerHeight/2 - e.pageY)/30;
+    card.style.transform=rotateY(${x}deg) rotateX(${y}deg);
+  });
+});
+</script>
+
+</body>
+</html>
